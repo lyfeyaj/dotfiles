@@ -13,6 +13,7 @@ export HISTSIZE=$HISTFILESIZE
 if [ -n "$PS1" ]; then
 	source $HOME/.bash/colors.sh
 	source $HOME/.bash/alias.sh
+	source $HOME/.bash/git-prompt.sh
 	source $HOME/.bash/prompts.sh
 fi
 
@@ -33,7 +34,7 @@ if [[ -d $HOME/.rvm/bin ]]; then
 fi
 
 # This loads NVM
-[[ -s /Users/sunteya/.nvm/nvm.sh ]] && . /Users/sunteya/.nvm/nvm.sh 
+[[ -s /Users/lyfeyaj/.nvm/nvm.sh ]] && . /Users/lyfeyaj/.nvm/nvm.sh 
 
 if [ -r ~/.localrc ]; then
 	source ~/.localrc
