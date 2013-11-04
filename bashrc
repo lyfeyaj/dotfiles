@@ -25,7 +25,7 @@ fi
 # RVM
 if [[ -d $HOME/.rvm/bin ]]; then
 	export PATH=$PATH:$HOME/.rvm/bin
-	
+
 	if [[ -n "$PS1" ]]; then
 		export rvm_pretty_print_flag=1
 		source $HOME/.rvm/scripts/rvm
@@ -34,7 +34,7 @@ if [[ -d $HOME/.rvm/bin ]]; then
 fi
 
 # This loads NVM
-[[ -s /Users/lyfeyaj/.nvm/nvm.sh ]] && . /Users/lyfeyaj/.nvm/nvm.sh 
+[[ -s /Users/lyfeyaj/.nvm/nvm.sh ]] && . /Users/lyfeyaj/.nvm/nvm.sh
 
 if [ -r ~/.localrc ]; then
 	source ~/.localrc
