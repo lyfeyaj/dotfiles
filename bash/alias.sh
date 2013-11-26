@@ -19,3 +19,7 @@ alias gb='git branch'
 alias gph='git push'
 alias gpl='git pull'
 alias gm='git merge'
+
+# VIM alias
+alias vi='vim'
+alias vim='mvim'
