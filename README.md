@@ -5,7 +5,9 @@ sot is dot files and configs for myself.
 ## Installation
 
 	git clone git@github.com:lyfeyaj/sot.git ~/.sot
-	git clone git://github.com/lyfeyaj/sot.git ~/.sot [READ-ONLY]
+
+	# READ ONLY
+	git clone git://github.com/lyfeyaj/sot.git ~/.sot
 	cd ~/.sot
 	rake install
 
