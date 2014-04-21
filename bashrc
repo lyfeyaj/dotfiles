@@ -39,3 +39,9 @@ fi
 if [ -r ~/.localrc ]; then
 	source ~/.localrc
 fi
+
+export PATH=/usr/local/share/npm/bin/:$PATH
+export CC=/usr/bin/clang
+
+# Use direnv
+eval "$(direnv hook bash)"
