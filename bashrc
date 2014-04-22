@@ -34,13 +34,19 @@ if [[ -d $HOME/.rvm/bin ]]; then
 fi
 
 # This loads NVM
+
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 
 if [ -r ~/.localrc ]; then
 	source ~/.localrc
 fi
 
+
 # Gradle Home
 export GRADLE_HOME=/opt/gradle-1.8
 export PATH=$PATH:$GRADLE_HOME/bin
+
 export CC=/usr/bin/clang
+
+# Use direnv
+eval "$(direnv hook bash)"

@@ -21,17 +21,22 @@
 
 [include]
 	path = ~/.gitconfig.local
+
 [user]
 	name = lyfeyaj
 	email = lyfeyaj@gmail.com
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
+
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [push]
 	default = simple
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f

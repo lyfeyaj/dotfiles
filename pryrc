@@ -37,7 +37,7 @@ class << Pry
   # starts.
   #
   # See https://github.com/carlhuda/bundler/issues/183 for some background.
-  # 
+
   def debundle!
     return unless defined?(Bundler)
     loaded = false
@@ -130,6 +130,8 @@ Pry.config.hooks.add_hook(:when_started, :debundle){ Pry.debundle! }
 # into your Pry.
 Pry.config.hooks.add_hook(:after_eval, :debundle){ Pry.debundle! }
 
+# Load extra pry tools
+
 begin
   require "pry-nav"
   Pry.commands.alias_command 'c', 'continue'
@@ -145,7 +147,7 @@ rescue LoadError => e
 end
 
 begin
-  require 'awesome_print' 
+  require 'awesome_print'
   # Pry.config.print = proc { |output, value| output.puts value.ai }
 rescue LoadError => err
 end
