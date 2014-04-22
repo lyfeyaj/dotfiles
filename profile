@@ -17,3 +17,5 @@ if [ "${BASH-no}" != "no" ]; then
 	[ -r ~/.bashrc ] && source ~/.bashrc
 fi
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
