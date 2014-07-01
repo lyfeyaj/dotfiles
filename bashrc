@@ -34,6 +34,7 @@ fi
 
 # This loads NVM
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 if [ -r ~/.localrc ]; then
 	source ~/.localrc
