@@ -6,7 +6,7 @@
 	ui = auto
 
 [core]
-	excludesfile = /Users/felixliu/.gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = false
 	quotepath = false
 
