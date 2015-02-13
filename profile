@@ -4,7 +4,7 @@ export local_profile_loaded=1
 if [[ "$(uname)" == "Darwin" ]]; then
 	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 	export MANPATH=/usr/local/man:/usr/local/share/man:/usr/share/man:$MANPATH
-	
+
 	export JAVA_HOME=/Library/Java/Home
 fi
 
@@ -20,5 +20,5 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export NVM_DIR="/Users/felix/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
