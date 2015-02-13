@@ -1,13 +1,13 @@
 require "erb"
 
-desc "install sot's file to user's home directory"
+desc "install dotfiles's file to user's home directory"
 task :install do
   Dir["*"].each do |file|
     next if %w[ Rakefile README.md bin ].include?(file)
-    
+
     file_name = file.sub(".erb", "")
     target_file = "#{ENV['HOME']}/.#{file_name}"
-    
+
     replace_all = false
     if File.exist?(target_file)
       if File.identical?(file, target_file)

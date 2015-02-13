@@ -1,14 +1,14 @@
-# What's Sot ?
+# What's Dotfiles ?
 
-sot is dot files and configs for myself.
+Dotfiles is dot files and configs for myself.
 
 ## Installation
 
-	git clone git@github.com:lyfeyaj/sot.git ~/.sot
+	git clone git@github.com:lyfeyaj/dotfiles.git ~/.mydotfiles
 
 	# READ ONLY
-	git clone git://github.com/lyfeyaj/sot.git ~/.sot
-	cd ~/.sot
+	git clone git://github.com/lyfeyaj/dotfiles.git ~/.mydotfiles
+	cd ~/.mydotfiles
 	rake install
 
 ## Reference
