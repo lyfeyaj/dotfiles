@@ -6,10 +6,10 @@
 #
 # subversion-prompt : Subversion aware bash prompt.
 # To use it, add something like that to your .bashrc:
-   SVNP_HUGE_REPO_EXCLUDE_PATH="nufw-svn$|/tags$|/branches$"
+#    SVNP_HUGE_REPO_EXCLUDE_PATH="nufw-svn$|/tags$|/branches$"
 #    . ~/bin/subversion-prompt
 #    # set a fancy prompt
-   PS1='\u@\h:\w$(__svn_stat)\$ '
+#    PS1='\u@\h:\w$(__svn_stat)\$ '
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
