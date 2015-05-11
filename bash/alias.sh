@@ -20,7 +20,8 @@ alias gba='git branch --all'
 alias gph='git push'
 alias gpl='git pull'
 alias gm='git merge'
+alias gsum='git summary'
 
 # VI and VIM alias
-alias vi='vim'
-alias vim='mvim'
+# alias vi='vim'
+# alias vim='mvim'

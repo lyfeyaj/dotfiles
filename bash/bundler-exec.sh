@@ -1,7 +1,8 @@
 #!/bin/bash
-# reference by http://effectif.com/ruby/automating-bundle-exec
 
-BUNDLED_COMMANDS="${BUNDLED_COMMANDS:-cap capify cucumber heroku rackup rails rake rspec ruby shotgun spec spork thin unicorn unicorn_rails}"
+# Automatically run Ruby scripts with "bundle exec" (but only when appropriate).
+# http://effectif.com/ruby/automating-bundle-exec
+# Github: https://github.com/gma/bundler-exec
 
 ## Functions
 
@@ -23,14 +24,56 @@ within-bundled-project()
 run-with-bundler()
 {
     if bundler-installed && within-bundled-project; then
-        bundle exec $@
+        bundle exec "$@"
     else
-        $@
+        "$@"
     fi
 }
 
 ## Main program
 
+BUNDLED_COMMANDS="${BUNDLED_COMMANDS:-
+cap
+capify
+chefspec
+chef-apply
+chef-client
+chef-shell
+chef-solo
+cucumber
+foodcritic
+foreman
+guard
+haml
+html2haml
+jasmine
+kitchen
+knife
+middleman
+pry
+rackup
+rake
+rake2thor
+rspec
+ruby
+sass
+sass-convert
+serve
+shotgun
+spec
+spork
+strainer
+thin
+thor
+tilt
+tt
+turn
+unicorn
+unicorn_rails
+}"
+
 for CMD in $BUNDLED_COMMANDS; do
-    alias $CMD="run-with-bundler $CMD"
+    if [[ $CMD != "bundle" && $CMD != "gem" ]]; then
+        alias $CMD="run-with-bundler $CMD"
+    fi
 done

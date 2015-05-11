@@ -15,10 +15,14 @@ if [ -n "$PS1" ]; then
 	source $HOME/.bash/alias.sh
 	source $HOME/.bash/git-prompt.sh
 	source $HOME/.bash/prompts.sh
+	source $HOME/.bash/svn-prompt.sh
+	source $HOME/.bash/functions.sh
+	source $HOME/.bash/exports.sh
 fi
 
 if [[ "$(uname)" == "Darwin" ]]; then # MAC
 	source $HOME/.bash/darwin.sh
+	export CC=/usr/bin/clang
 fi
 
 # RVM
@@ -44,8 +48,6 @@ fi
 # Gradle Home
 #export GRADLE_HOME=/opt/gradle-1.8
 #export PATH=$PATH:$GRADLE_HOME/bin
-
-export CC=/usr/bin/clang
 
 # Use direnv
 eval "$(direnv hook $0)"
