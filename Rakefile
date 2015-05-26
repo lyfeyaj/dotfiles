@@ -1,4 +1,4 @@
-require "erb"
+require 'erb'
 
 desc "install dotfiles's file to user's home directory"
 task :install do
@@ -34,6 +34,7 @@ task :install do
   end
 end
 
+@my_dirname = Dir.pwd.split('/').last
 
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
