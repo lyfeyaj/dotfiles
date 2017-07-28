@@ -90,8 +90,9 @@ function prompt_func() {
     git_prompt=" (${git_prompt_color}${__git_ps1_prompt}${COLOR_NONE}${git_status})"
   fi
 
-  #prompt="${LIGHT_GREEN}\h:${LIGHT_BLUE}\w${COLOR_NONE}${git_prompt}"
-  prompt="${LIGHT_GREEN}\u:${LIGHT_BLUE}\W${COLOR_NONE}${git_prompt}"
+  # prompt="${LIGHT_GREEN}\h:${LIGHT_BLUE}\w${COLOR_NONE}${git_prompt}"
+  # prompt="${LIGHT_GREEN}\u:${LIGHT_BLUE}\W${COLOR_NONE}${git_prompt}"
+  prompt="${LIGHT_GREEN}-> ${LIGHT_BLUE}\W${COLOR_NONE}${git_prompt}"
 
   if [[ $(id -u) == 0 ]]; then
     user_prompt="#"
